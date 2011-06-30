@@ -11,7 +11,7 @@ to install as a plugin
   
 == Usage
 
-Auto Install:
+= Auto Install:
 Use the generator to copy the error files over and add the route to catch all routing errors:
 
   rails generator mosaic_errors
@@ -20,9 +20,14 @@ Add to ApplicationController:
 
   include Mosaic::Errors
   
-Manual Install:
+Ensure the provided route goes very last in your config/routes.rb file as it will catch anything that is not previously configured
+  
+= Manual Install:
 Create the path:
+
   match '*path', :to => 'application#routing_error'
+  
+Ensure the above route comes very last in your config/routes.rb file as it will catch anything that is not previously configured
 
 Create the folder app/views/errors and drop the files internal_server_error.html.haml & not_found.html.haml
   
