@@ -1,1 +1,1 @@
-require 'mosaic/errros'
+require 'mosaic/errors'
