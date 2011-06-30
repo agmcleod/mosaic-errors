@@ -31,6 +31,7 @@ module Mosaic
 
     protected
       def render_application_error_template(status)
+        Rails.logger.debug ">>>>>>>>>>>>>>>>>>>>>> #{status}"
         render :template => "errors/#{status}", :status => status
       rescue ActionView::MissingTemplate
         render :nothing => true, :status => status
