@@ -26,7 +26,7 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
-    "lib/mosaic/errors/errors.rb",
+    "lib/mosaic/errors.rb",
     "lib/mosaic_errors.rb",
     "mosaic_errors.gemspec",
     "test/helper.rb",
