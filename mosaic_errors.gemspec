@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{mosaic_errors}
-  s.version = "0.2.0"
+  s.version = "0.2.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Kel Stopper"]
@@ -27,10 +27,10 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "lib/generators/error_pages_generator.rb",
+    "lib/generators/templates/internal_server_error.html.haml",
+    "lib/generators/templates/not_found.html.haml",
     "lib/mosaic/errors.rb",
     "lib/mosaic_errors.rb",
-    "lib/templates/internal_server_error.html.haml",
-    "lib/templates/not_found.html.haml",
     "mosaic_errors.gemspec",
     "test/helper.rb",
     "test/test_mosaic_errors.rb"
