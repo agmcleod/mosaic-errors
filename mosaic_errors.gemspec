@@ -28,6 +28,7 @@ Gem::Specification.new do |s|
     "VERSION",
     "lib/mosaic/errors/errors.rb",
     "lib/mosaic_errors.rb",
+    "mosaic_errors.gemspec",
     "test/helper.rb",
     "test/test_mosaic_errors.rb"
   ]
