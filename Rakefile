@@ -15,10 +15,10 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "mosaic_errors"
-  gem.homepage = "http://github.com/kel/mosaic_errors"
+  gem.homepage = "http://github.mosaic.com/kel/mosaic_errors"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Handles custom error pages in a rails 3 application}
+  gem.description = %Q{This gem, user in conjunction with hoptoad notifier will supply custom error pages to a rails 3 application. }
   gem.email = "kel.stopper@mosaic.com"
   gem.authors = ["Kel Stopper"]
   # dependencies defined in Gemfile
