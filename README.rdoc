@@ -1,19 +1,32 @@
 = mosaic_errors
 
-Description goes here.
+Plugin/Gem to add custom error pages to your rails 3 app.
 
-== Contributing to mosaic_errors
- 
-* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
-* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
-* Fork the project
-* Start a feature/bugfix branch
-* Commit and push until you are happy with your contribution
-* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.
-* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.
+to install as a gem
+  gem 'mosaic_errors', :git => 'git://github.mosaic.com/kel/mosaic_errors.git'
+  bundle install
+  
+to install as a plugin
+  rails plugin install git://github.mosaic.com/kel/mosaic_errors.git
+  
+== Usage
 
-== Copyright
+Auto Install:
+Use the generator to copy the error files over and add the route to catch all routing errors:
 
-Copyright (c) 2011 Kel Stopper. See LICENSE.txt for
-further details.
+  rails generator mosaic_errors
+  
+Add to ApplicationController:
+
+  include Mosaic::Errors
+  
+Manual Install:
+Create the path:
+  match '*path', :to => 'application#routing_error'
+
+Create the folder app/views/errors and drop the files internal_server_error.html.haml & not_found.html.haml
+  
+Add to ApplicationController:
+
+  include Mosaic::Errors
 
