@@ -1,4 +1,4 @@
-class ErrorPagesGenerator < Rails::Generators::NamedBase
+class ErrorPagesGenerator < Rails::Generators::Base
   source_root File.expand_path("../templates", __FILE__)
   
   def copy_error_pages
