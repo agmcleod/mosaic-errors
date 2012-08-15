@@ -35,3 +35,8 @@ Add to ApplicationController:
 
   include Mosaic::Errors
 
+== Configuration
+
+By default this gem will not display a stacktrace when something goes wrong. This can potentially be problematic when debugging an application so this behaviour can be overridden by adding the following to an initializer:
+
+  Mosaic::Errors.include_stack_trace!

@@ -1,8 +1,17 @@
 module Mosaic
   module Errors
+    @@include_stack_trace = false
+
+    def self.include_stack_trace!
+      @@include_stack_trace = true
+    end
+
     def self.included(controller)
       controller.extend(ClassMethods)
-      controller.rescue_from Exception, :with => :render_application_error_template_for_exception
+      controller.rescue_from Exception do |exception|
+       render_application_error_template_for_exception(exception)
+       Rails.logger.error exception.backtrace.join("\n") if include_stack_trace?
+      end
     end
 
     def routing_error
@@ -40,6 +49,10 @@ module Mosaic
         status = self.class.rescue_responses[exception.class.name]
         notify_hoptoad(exception) if status == :internal_server_error
         render_application_error_template status
+      end
+
+      def include_stack_trace?
+        @@include_stack_trace
       end
   end
 end
