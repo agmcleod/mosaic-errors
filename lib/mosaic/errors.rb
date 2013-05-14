@@ -47,8 +47,16 @@ module Mosaic
 
       def render_application_error_template_for_exception(exception)
         status = self.class.rescue_responses[exception.class.name]
-        notify_hoptoad(exception) if status == :internal_server_error || status == :not_found
+        send_exception_notification(exception) if status == :internal_server_error || status == :not_found
         render_application_error_template status
+      end
+
+      def send_exception_notification(exception)
+        if defined? notify_airbrake
+          notify_airbrake(exception)
+        elsif defined? notify_hoptoad
+          notify_hoptoad(exception)
+        end
       end
 
       def include_stack_trace?
