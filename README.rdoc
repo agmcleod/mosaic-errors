@@ -1,13 +1,13 @@
-= mosaic_errors
+= mosaic-errors
 
 Plugin/Gem to add custom error pages to your rails 3 app.
 
 to install as a gem
-  gem 'mosaic_errors', :git => 'git://github.mosaic.com/kel/mosaic_errors.git'
+  gem 'mosaic-errors', :git => 'git://git.corp.mosaic.com/mosaiccis/mosaic_errors.git'
   bundle install
   
 to install as a plugin
-  rails plugin install git://github.mosaic.com/kel/mosaic_errors.git
+  rails plugin install git://git.corp.mosaic.com/mosaiccis/mosaic-errors.git
   
 == Usage
 
