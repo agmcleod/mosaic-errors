@@ -13,39 +13,22 @@ Add to Gemfile:
 Then...
 
     bundle install
-  
+
 Usage
 -----
 
-### Auto Install
+### Installation steps
 
-Use the generator to copy the error files over and add the route to catch all routing errors:
-
-    rails generator mosaic_errors
-  
 Add to ApplicationController:
 
     include Mosaic::Errors
-  
-Ensure the provided route goes very last in your config/routes.rb file as it will catch anything that is not previously configured
-  
-### Manual Install
 
 Add to config/routes.rb:
 
-    match '*path', :to => 'application#routing_error'
-  
-Ensure the above route comes very last in your config/routes.rb file as it will catch anything that is not previously configured.
+    mount Errors::Engine => "/"
 
-Create the folder app/views/errors and drop the files internal_server_error.html.haml & not_found.html.haml
-  
-Add to ApplicationController:
+Add to config/application.rb
 
-    include Mosaic::Errors
+    config.exceptions_app = self.routes
 
-Configuration
--------------
-
-By default this gem will not display a stacktrace when something goes wrong. This can potentially be problematic when debugging an application so this behaviour can be overridden by adding the following to an initializer:
-
-    Mosaic::Errors.include_stack_trace!
+Restart your app.
