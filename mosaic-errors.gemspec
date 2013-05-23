@@ -14,7 +14,7 @@ Gem::Specification.new do |gem|
 
   gem.authors     = ["Kel Stopper"]
   gem.email       = ["kel.stopper@mosaic.com"]
-  gem.homepage    = "http://git.corp.mosaic.com/mosaiccis/mosaic-errors"
+  gem.homepage    = "https://github.com/mosaicxm/mosaic-errors"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
