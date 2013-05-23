@@ -1,10 +1,6 @@
 Usage:
     rails generate errors setup
 
-    or
-
-    bundle exec rails generate error setup
-
     This will create:
         - A routing entry in config/routes.rb for "mount Mosaic::Errors::Engine => '/'"
         - A config entry in config/application.rb for "config.exceptions_app = self.routes"
