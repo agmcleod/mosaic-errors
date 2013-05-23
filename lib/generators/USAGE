@@ -1,8 +1,13 @@
-Description:
-    Explain the generator
+Usage:
+    rails generate errors setup
 
-Example:
-    rails generate errors Thing
+    or
+
+    bundle exec rails generate error setup
 
     This will create:
-        what/will/it/create
+        - A routing entry in config/routes.rb for "mount Mosaic::Errors::Engine => '/'"
+        - A config entry in config/application.rb for "config.exceptions_app = self.routes"
+
+Description:
+    This will generate an entry in Routing table and update Application.rb to load MosaicErros engine
