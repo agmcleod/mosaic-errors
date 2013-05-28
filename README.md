@@ -20,13 +20,9 @@ Usage
 
     rails generate errors setup
 
-    This will create an Errors controller and views.
+    This will create an Errors controller, views and update routing table.
 
 ### Manual installation steps
-
-Add to config/routes.rb:
-
-    mount Mosaic::Errors::Engine => "/"
 
 Add to config/application.rb
 
