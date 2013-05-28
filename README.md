@@ -16,12 +16,13 @@ Then...
 
 Usage
 -----
+### Automated installation steps
 
-### Installation steps
+    rails generate errors setup
 
-Add to ApplicationController:
+    This will create an Errors controller and views.
 
-    include Mosaic::Errors
+### Manual installation steps
 
 Add to config/routes.rb:
 
@@ -46,6 +47,6 @@ Remove 400, 422 and 500 from public directory.
 
 This gem provides default error pages. If you need your application specific errors, then:
 
-  1. Create an errors layout under app/views/layouts. 
+  1. Create an errors layout under app/views/layouts.
   2. Create an errors directory under app/views.
   3. Add internal_server_error.html.haml, not_found.html.haml and unprocessable_entity.html.haml with your custom messages.

@@ -7,5 +7,4 @@ class ErrorsController < ApplicationController
 
   def unprocessable_entity
   end
-
 end
