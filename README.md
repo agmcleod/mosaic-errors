@@ -33,6 +33,7 @@ Add to config/application.rb
     config.exceptions_app = self.routes
 
 Create new contoller ErrorsController with following three methods:
+
     class ErrorsController < ApplicationController
       def internal_server_error
       end
