@@ -9,6 +9,15 @@ class ErrorsGenerator < Rails::Generators::NamedBase
     application "config.exceptions_app = self.routes"
 
     copy_file 'controllers/errors_controller.rb', 'app/controllers/errors_controller.rb'
-    directory 'views/errors', 'app/views/errors'
+    file_type = 'erb'
+    begin
+      if Haml
+        file_type = 'haml'
+      end
+    rescue NameError
+    end
+    copy_file "views/errors/internal_server_error.html.#{file_type}", "app/views/errors/internal_server_error.html.#{file_type}"
+    copy_file "views/errors/not_found.html.#{file_type}", "app/views/errors/not_found.html.#{file_type}"
+    copy_file "views/errors/unprocessable_entity.html.#{file_type}", "app/views/errors/unprocessable_entity.html.#{file_type}"
   end
 end
