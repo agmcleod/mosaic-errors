@@ -10,5 +10,7 @@ class ErrorsGenerator < Rails::Generators::NamedBase
 
     copy_file 'controllers/errors_controller.rb', 'app/controllers/errors_controller.rb'
     directory 'views/errors', 'app/views/errors'
+    copy_file 'initializer.rb', 'config/initializers/mosaic-errors.rb'
+    directory 'locales', 'config/locales/errors'
   end
 end
