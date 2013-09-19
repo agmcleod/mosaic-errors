@@ -15,6 +15,5 @@ class ErrorsGenerator < Rails::Generators::NamedBase
     copy_file "views/errors/internal_server_error.html.#{file_type}", "app/views/errors/internal_server_error.html.#{file_type}"
     copy_file "views/errors/not_found.html.#{file_type}", "app/views/errors/not_found.html.#{file_type}"
     copy_file "views/errors/unprocessable_entity.html.#{file_type}", "app/views/errors/unprocessable_entity.html.#{file_type}"
-    directory 'locales', 'config/locales/errors'
   end
 end
