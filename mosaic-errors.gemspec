@@ -25,5 +25,6 @@ Gem::Specification.new do |gem|
 
   gem.add_development_dependency "rake", [">= 0"]
   gem.add_development_dependency "shoulda", [">= 0"]
+  gem.add_development_dependency "rspec", [">= 2.14.1"]
 end
 
