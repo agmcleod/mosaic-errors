@@ -1,0 +1,11 @@
+en:
+  errors:
+    internal_server_error:
+      heading: "We're sorry..."
+      body: "There was an error with the page you requested."
+    not_found:
+      heading: "Page Not Found"
+      body: "You may have mistyped the address or the page may have moved."
+    unprocessable_entity:
+      heading: "Unprocessable Entity"
+      body: "Unable to process your request at this time. Please try again."

@@ -9,6 +9,8 @@ class ErrorsGenerator < Rails::Generators::NamedBase
     application "config.exceptions_app = self.routes"
 
     copy_file 'controllers/errors_controller.rb', 'app/controllers/errors_controller.rb'
+    copy_file 'initializer.rb', 'config/initializers/mosaic-errors.rb'
+    directory 'locales', 'config/locales/errors'
     file_type = Rails::Generators.options[:rails][:template_engine].to_s
     copy_file "views/errors/internal_server_error.html.#{file_type}", "app/views/errors/internal_server_error.html.#{file_type}"
     copy_file "views/errors/not_found.html.#{file_type}", "app/views/errors/not_found.html.#{file_type}"
