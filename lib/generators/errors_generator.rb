@@ -1,3 +1,5 @@
+require 'rails/generators'
+
 class ErrorsGenerator < Rails::Generators::NamedBase
   source_root File.expand_path('../templates/', __FILE__)
 
